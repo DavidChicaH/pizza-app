@@ -1,29 +1,21 @@
-"use client";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
-import { useRouter } from "next/navigation";
 
 export const metadata = {
   title: "Pizza Restaurant",
   description: "An app for a pizzas restarurant",
-  keywords: ["pizza", "food", "restaurant", "medellin"]
+  keywords: ["pizza", "food", "restaurant", "medellin"],
 };
 
 export default function RootLayout({ children }) {
-  const router = useRouter();
-
-  const handleCartNavigation = () => {
-    router.push("/cart");
-  }
-
-  const handleHomeNavigation = () => {
-    router.push("/");
-  }
   return (
     <html>
+      <head>
+        <link rel="icon" href="/img/favicon.ico" />
+      </head>
       <body>
-        <Navbar navigateCart={handleCartNavigation} navigateHome={handleHomeNavigation}/>
+        <Navbar />
         {children}
         <Footer />
       </body>
