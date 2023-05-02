@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 export const metadata = {
   title: "Pizza Restaurant",
   description: "An app for a pizzas restarurant",
+  keywords: ["pizza", "food", "restaurant", "medellin"]
 };
 
 export default function RootLayout({ children }) {
